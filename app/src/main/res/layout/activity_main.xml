@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:screenOrientation="landscape"
+    tools:context="com.example.myapplication.MainActivity">
+
+    <Button
+        android:id="@+id/five"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/round_button"
+        android:screenOrientation="landscape"
+        android:text="@string/_5"
+        app:layout_constraintBottom_toTopOf="@+id/bottomTine5"
+        app:layout_constraintEnd_toEndOf="@id/endTine54"
+        app:layout_constraintStart_toStartOf="@+id/screenStart"
+        app:layout_constraintTop_toBottomOf="@+id/topTine5" />
+
+    <Button
+        android:id="@+id/three"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/round_button"
+        android:screenOrientation="landscape"
+        android:text="@string/_3"
+        app:layout_constraintBottom_toTopOf="@+id/bottomTine3"
+        app:layout_constraintEnd_toEndOf="@id/endTine23"
+        app:layout_constraintStart_toStartOf="@+id/screenStart"
+        app:layout_constraintTop_toBottomOf="@+id/topTine3" />
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/round_button"
+        android:screenOrientation="landscape"
+        android:text="@string/_1"
+        app:layout_constraintBottom_toTopOf="@+id/bottomTine1"
+        app:layout_constraintEnd_toEndOf="@id/endTine1"
+        app:layout_constraintStart_toStartOf="@+id/screenStart"
+        app:layout_constraintTop_toBottomOf="@+id/topTine1" />
+
+    <Button
+        android:id="@+id/two"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/round_button"
+        android:screenOrientation="landscape"
+        android:text="@string/_2"
+        app:layout_constraintBottom_toTopOf="@+id/bottomTine2"
+        app:layout_constraintEnd_toEndOf="@id/endTine23"
+        app:layout_constraintStart_toStartOf="@+id/screenStart"
+        app:layout_constraintTop_toBottomOf="@+id/topTine2"  />
+
+
+    <Button
+        android:id="@+id/four"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/round_button"
+        android:screenOrientation="landscape"
+        android:text="@string/_4"
+        app:layout_constraintBottom_toTopOf="@+id/bottomTine4"
+        app:layout_constraintEnd_toEndOf="@id/endTine54"
+        app:layout_constraintStart_toStartOf="@+id/screenStart"
+        app:layout_constraintTop_toBottomOf="@+id/topTine4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screenStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endTine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="123dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endTine23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endTine54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topTine5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24"  />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomTine5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topTine3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomTine3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topTine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomTine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topTine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomTine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.71" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topTine4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.76" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomTine4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.84" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
