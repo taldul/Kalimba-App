@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     SwipeListener swipeListener;
     private SoundPool soundPool;
     private int sound_one, sound_two, sound_three, sound_four, sound_five;
-
+    private Button startButton;
+    private boolean isStarted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         three= (Button) findViewById(R.id.three);
         four= (Button) findViewById(R.id.four);
         five= (Button) findViewById(R.id.five);
+        startButton = (Button) findViewById(R.id.startButton);
 
         soundPool = new SoundPool.Builder().setMaxStreams(5).build();
 
