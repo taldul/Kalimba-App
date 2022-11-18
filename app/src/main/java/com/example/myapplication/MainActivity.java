@@ -1,9 +1,20 @@
 package com.example.myapplication;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.media.SoundPool;
+import android.media.projection.MediaProjection;
+import android.media.projection.MediaProjectionManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -17,18 +28,26 @@ public class MainActivity extends AppCompatActivity {
     SwipeListener swipeListener;
     private SoundPool soundPool;
     private int sound_one, sound_two, sound_three, sound_four, sound_five;
-
+    private Button startButton;
+    private static final int REQ_PERMISSIONS = 1;
+    private String [] permissions = new String[] {
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+    private Intent mProjectData;
+    private boolean isStarted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        reqPermissions();
 
         one= (Button) findViewById(R.id.one);
         two= (Button) findViewById(R.id.two);
         three= (Button) findViewById(R.id.three);
         four= (Button) findViewById(R.id.four);
         five= (Button) findViewById(R.id.five);
+        startButton = (Button) findViewById(R.id.startButton);
 
         soundPool = new SoundPool.Builder().setMaxStreams(5).build();
 
@@ -43,6 +62,22 @@ public class MainActivity extends AppCompatActivity {
         swipeListener = new SwipeListener(three);
         swipeListener = new SwipeListener(four);
         swipeListener = new SwipeListener(five);
+
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isStarted) {
+                    startButton.setText("Start");
+                    isStarted = false;
+                } else {
+                    startButton.setText("Stop");
+                    isStarted = true;
+                }
+            }
+        });
+
+
+
 }
 
     class SwipeListener implements View.OnTouchListener {
@@ -116,5 +151,22 @@ public class MainActivity extends AppCompatActivity {
             return gestureDetector.onTouchEvent(motionEvent);
         }
 
+    }
+
+    private void reqPermissions() {
+        if(ActivityCompat.checkSelfPermission(this, permissions[0]) == PackageManager.PERMISSION_DENIED) {
+            ActivityCompat.requestPermissions(this, permissions, REQ_PERMISSIONS);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQ_PERMISSIONS) {
+            if(grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                finish();
+            }
+        }
     }
 }
