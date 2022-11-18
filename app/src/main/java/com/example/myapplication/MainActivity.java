@@ -43,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
         swipeListener = new SwipeListener(three);
         swipeListener = new SwipeListener(four);
         swipeListener = new SwipeListener(five);
+
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isStarted) {
+                    startButton.setText("Start");
+                    isStarted = false;
+                } else {
+                    startButton.setText("Stop");
+                    isStarted = true;
+                }
+            }
+        });
 }
 
     class SwipeListener implements View.OnTouchListener {
