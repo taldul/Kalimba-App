@@ -25,6 +25,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
+        <service
+            android:name="com.example.myapplication.ScreenCaptureService"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity
             android:name="com.example.myapplication.MainActivity"
             android:exported="true" >

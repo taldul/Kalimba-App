@@ -5,6 +5,7 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private int sound_one, sound_two, sound_three, sound_four, sound_five;
     private Button startButton;
     private static final int REQ_PERMISSIONS = 1;
+    private static final int REQ_PROJECTIONS = 2;
     private String [] permissions = new String[] {
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
@@ -63,22 +65,43 @@ public class MainActivity extends AppCompatActivity {
         swipeListener = new SwipeListener(four);
         swipeListener = new SwipeListener(five);
 
+
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(isStarted) {
-                    startButton.setText("Start");
+                    stopScreenCapture();
+                    //startButton.setText("Start");
                     isStarted = false;
                 } else {
-                    startButton.setText("Stop");
+                    startScreenCapture();
+                    //startButton.setText("Stop");
                     isStarted = true;
                 }
             }
         });
 
 
+}
+
+private void startScreenCapture() {
+        if (mProjectData == null) {
+            // create capture intent with MediaProjectionManager
+            Intent captureIntent = ((MediaProjectionManager) getSystemService(MEDIA_PROJECTION_SERVICE)).createScreenCaptureIntent();
+            startActivityForResult(captureIntent, REQ_PROJECTIONS);
+        }
+    Intent serviceIntent = new Intent(this, ScreenCaptureService.class);
+    serviceIntent.setAction("start");
+    serviceIntent.putExtra("com.example.pData",mProjectData );
+    startService(serviceIntent);
 
 }
+
+private void stopScreenCapture() {
+        Intent serviceIntent = new Intent(this, ScreenCaptureService.class);
+        serviceIntent.setAction("stop");
+        startService(serviceIntent);
+    }
 
     class SwipeListener implements View.OnTouchListener {
         GestureDetector gestureDetector;
@@ -166,6 +189,18 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == REQ_PERMISSIONS) {
             if(grantResults[0] == PackageManager.PERMISSION_DENIED) {
                 finish();
+            }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (REQ_PROJECTIONS == requestCode) {
+            if (resultCode == RESULT_OK) {
+                mProjectData = data;
+                startScreenCapture();
             }
         }
     }

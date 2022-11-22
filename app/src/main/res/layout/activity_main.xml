@@ -176,7 +176,7 @@
         android:rotation="-90"
         android:text="Start"
         app:layout_constraintStart_toStartOf="@+id/endTine1"
-        app:layout_constraintTop_toBottomOf="@+id/topTine4"  />
+        app:layout_constraintTop_toBottomOf="@+id/topTine1"  />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
