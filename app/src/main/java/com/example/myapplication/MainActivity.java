@@ -1,15 +1,33 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.media.AudioAttributes;
+import android.media.AudioFormat;
+import android.media.AudioPlaybackCaptureConfiguration;
+import android.media.AudioRecord;
 import android.media.SoundPool;
+import android.media.projection.MediaProjection;
+import android.media.projection.MediaProjectionManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,17 +37,29 @@ public class MainActivity extends AppCompatActivity {
     private int sound_one, sound_two, sound_three, sound_four, sound_five;
     private Button startButton;
     private boolean isStarted;
-
+    private MediaProjectionManager mpm;
+    private AudioRecord record;
+    static final int SAMPLE_RATE = 44100;
+    static final int CHANNEL_CONFIG = AudioFormat.CHANNEL_IN_MONO;
+    static final int AUDIO_FORMAT = AudioFormat.ENCODING_PCM_8BIT;
+    static final int BUFFER_SIZE_RECORDING = AudioRecord.getMinBufferSize(SAMPLE_RATE, CHANNEL_CONFIG, AUDIO_FORMAT);
+    private static final int REQ_PERMISSIONS = 1;
+    private static final int REQ_PROJECTIONS = 2;
+    private String [] permissions = new String[] {
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+    @SuppressLint("MissingPermission")
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        one= (Button) findViewById(R.id.one);
-        two= (Button) findViewById(R.id.two);
-        three= (Button) findViewById(R.id.three);
-        four= (Button) findViewById(R.id.four);
-        five= (Button) findViewById(R.id.five);
+        one = (Button) findViewById(R.id.one);
+        two = (Button) findViewById(R.id.two);
+        three = (Button) findViewById(R.id.three);
+        four = (Button) findViewById(R.id.four);
+        five = (Button) findViewById(R.id.five);
         startButton = (Button) findViewById(R.id.startButton);
 
         soundPool = new SoundPool.Builder().setMaxStreams(5).build();
@@ -45,20 +75,49 @@ public class MainActivity extends AppCompatActivity {
         swipeListener = new SwipeListener(three);
         swipeListener = new SwipeListener(four);
         swipeListener = new SwipeListener(five);
+        reqPermissions();
+        mpm = ((MediaProjectionManager) getSystemService(MEDIA_PROJECTION_SERVICE));
+        Intent captureIntent = mpm.createScreenCaptureIntent();
+
+        MediaProjection mediaProjection = mpm.getMediaProjection(-1, captureIntent);
+        // Retrieve a audio capable projection from the MediaProjectionManager
+        record = new AudioRecord.Builder().build();
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(isStarted) {
                     startButton.setText("Start");
+                    record.stop();
+                    record.release();
+                    writeAudioData(getFilesDir() + "record.wav");
                     isStarted = false;
                 } else {
                     startButton.setText("Stop");
+                    record.startRecording();
                     isStarted = true;
                 }
             }
         });
+
+
 }
+    private void reqPermissions() {
+        if(ActivityCompat.checkSelfPermission(this, permissions[0]) == PackageManager.PERMISSION_DENIED) {
+            ActivityCompat.requestPermissions(this, permissions, REQ_PERMISSIONS);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQ_PERMISSIONS) {
+            if(grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                finish();
+            }
+        }
+    }
 
     class SwipeListener implements View.OnTouchListener {
         GestureDetector gestureDetector;
@@ -131,5 +190,44 @@ public class MainActivity extends AppCompatActivity {
             return gestureDetector.onTouchEvent(motionEvent);
         }
 
+
+
     }
+    private void writeAudioData(String fileName) { // to be called in a Runnable for a Thread created after call to startRecording()
+
+        byte[] data = new byte[BUFFER_SIZE_RECORDING/2]; // assign size so that bytes are read in in chunks inferior to AudioRecord internal buffer size
+
+        FileOutputStream outputStream = null;
+
+        try {
+            outputStream = new FileOutputStream(fileName); //fileName is path to a file, where audio data should be written
+        } catch (FileNotFoundException e) {
+            // handle error
+        }
+
+
+        int read = record.read(data, 0, data.length);
+        try {
+            outputStream.write(data, 0, read);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        try {
+            outputStream.flush();
+            outputStream.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Clean up
+        record.stop();
+        record.release();
+        record = null;
+
+    }
+
 }
