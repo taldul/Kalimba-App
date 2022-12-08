@@ -1272,6 +1272,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey_500
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -1757,8 +1758,6 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
-color purple_200
-color purple_500
 color purple_700
 color radiobutton_themeable_attribute_color
 color ripple_material_dark
@@ -1778,7 +1777,10 @@ color teal_700
 color test_color
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
+color timer_red
+color tines_color
 color tines_colors
+color tines_pressed
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -2452,6 +2454,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
+drawable backwithborders
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2476,6 +2479,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable kalimbaapp
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2518,6 +2522,8 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable round_button
+drawable round_button_pressed
+drawable selector_tine_pressed
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2622,6 +2628,7 @@ id bottomTine2
 id bottomTine3
 id bottomTine4
 id bottomTine5
+id bottomTineTimerBtn
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2747,6 +2754,7 @@ id grouping
 id groups
 id guideline
 id header_title
+id hideTimerBtn
 id hideable
 id home
 id homeAsUp
@@ -2770,6 +2778,7 @@ id jumpToStart
 id labeled
 id layout
 id left
+id leftStartHideButtons
 id leftToRight
 id legacy
 id line1
@@ -2880,6 +2889,7 @@ id ratio
 id rectangles
 id reverseSawtooth
 id right
+id rightStartHideButtons
 id rightToLeft
 id right_icon
 id right_side
@@ -2938,6 +2948,7 @@ id src_over
 id standard
 id start
 id startHorizontal
+id startTimerBtn
 id startToEnd
 id startVertical
 id staticLayout
@@ -2983,6 +2994,7 @@ id textinput_prefix_text
 id textinput_suffix_text
 id three
 id time
+id timerText
 id title
 id titleDividerNoCustom
 id title_template
@@ -2994,6 +3006,7 @@ id topTine2
 id topTine3
 id topTine4
 id topTine5
+id topTineTimerBtn
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3211,11 +3224,14 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw five
 raw four
 raw one
+raw starttimersound
+raw stoptimersound
 raw three
 raw two
 string _1
@@ -3264,6 +3280,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hide
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3345,7 +3362,11 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
+string show
+string start
 string status_bar_notification_info_overflow
+string stop
+string testTime
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

@@ -9,13 +9,43 @@
     android:screenOrientation="landscape"
     tools:context="com.example.myapplication.MainActivity">
 
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftStartHideButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightStartHideButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomTineTimerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topTineTimerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
     <Button
         android:id="@+id/five"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/selector_tine_pressed"
         android:screenOrientation="landscape"
         android:text="@string/_5"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/bottomTine5"
         app:layout_constraintEnd_toEndOf="@id/endTine54"
         app:layout_constraintStart_toStartOf="@+id/screenStart"
@@ -25,50 +55,62 @@
         android:id="@+id/three"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/selector_tine_pressed"
         android:screenOrientation="landscape"
         android:text="@string/_3"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/bottomTine3"
         app:layout_constraintEnd_toEndOf="@id/endTine23"
         app:layout_constraintStart_toStartOf="@+id/screenStart"
-        app:layout_constraintTop_toBottomOf="@+id/topTine3" />
+        app:layout_constraintTop_toBottomOf="@+id/topTine3"
+        app:strokeColor="#020202"
+        app:strokeWidth="2dip"/>
 
     <Button
         android:id="@+id/one"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/selector_tine_pressed"
         android:screenOrientation="landscape"
         android:text="@string/_1"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/bottomTine1"
         app:layout_constraintEnd_toEndOf="@id/endTine1"
         app:layout_constraintStart_toStartOf="@+id/screenStart"
-        app:layout_constraintTop_toBottomOf="@+id/topTine1" />
+        app:layout_constraintTop_toBottomOf="@+id/topTine1"
+        app:strokeColor="#020202"
+        app:strokeWidth="2dip"/>
 
     <Button
         android:id="@+id/two"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/selector_tine_pressed"
         android:screenOrientation="landscape"
         android:text="@string/_2"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/bottomTine2"
         app:layout_constraintEnd_toEndOf="@id/endTine23"
         app:layout_constraintStart_toStartOf="@+id/screenStart"
-        app:layout_constraintTop_toBottomOf="@+id/topTine2"  />
+        app:layout_constraintTop_toBottomOf="@+id/topTine2"
+        app:strokeColor="#020202"
+        app:strokeWidth="2dip" />
 
 
     <Button
         android:id="@+id/four"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/selector_tine_pressed"
         android:screenOrientation="landscape"
         android:text="@string/_4"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/bottomTine4"
         app:layout_constraintEnd_toEndOf="@id/endTine54"
         app:layout_constraintStart_toStartOf="@+id/screenStart"
-        app:layout_constraintTop_toBottomOf="@+id/topTine4" />
+        app:layout_constraintTop_toBottomOf="@+id/topTine4"
+        app:strokeColor="#020202"
+        app:strokeWidth="2dip"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/screenStart"
@@ -82,7 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="123dp" />
+        app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/endTine23"
@@ -103,71 +145,121 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24"  />
+        app:layout_constraintGuide_percent="0.18"  />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottomTine5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32" />
+        app:layout_constraintGuide_percent="0.26" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topTine3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.37" />
+        app:layout_constraintGuide_percent="0.31" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottomTine3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.39" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topTine1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.50" />
+        app:layout_constraintGuide_percent="0.44" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottomTine1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.58" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topTine2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.63" />
+        app:layout_constraintGuide_percent="0.57" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottomTine2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.71" />
+        app:layout_constraintGuide_percent="0.65" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topTine4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.76" />
+        app:layout_constraintGuide_percent="0.70" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottomTine4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84" />
+        app:layout_constraintGuide_percent="0.78" />
 
+    <Button
+        android:id="@+id/startTimerBtn"
+        android:layout_width="70dp"
+        android:layout_height="44dp"
+        android:rotation="-90"
+        android:text="@string/start"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="@id/bottomTineTimerBtn"
+        app:layout_constraintEnd_toEndOf="@id/rightStartHideButtons"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="@id/leftStartHideButtons"
+        app:layout_constraintTop_toTopOf="@id/topTineTimerBtn"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="#020202"
+        app:strokeWidth="2dip" />
+
+    <EditText
+        android:id="@+id/timerText"
+        android:layout_width="54dp"
+        android:layout_height="44dp"
+        android:background="@drawable/backwithborders"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:rotation="-90"
+        android:text="@string/testTime"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/rightStartHideButtons"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="@id/leftStartHideButtons"
+        app:layout_constraintTop_toBottomOf="@+id/startTimerBtn"
+        app:layout_constraintTop_toTopOf="@id/startTimerBtn"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <Button
+        android:id="@+id/hideTimerBtn"
+        android:layout_width="70dp"
+        android:layout_height="44dp"
+        android:rotation="-90"
+        android:text="@string/hide"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/rightStartHideButtons"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/leftStartHideButtons"
+        app:layout_constraintTop_toTopOf="@id/topTineTimerBtn"
+        app:layout_constraintVertical_bias="0.305"
+        app:strokeColor="#020202"
+        app:strokeWidth="2dip" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,88 +4,128 @@
         "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\drawable\\background.jpg"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_three.wav.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\three.wav"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_three.mp3.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\three.mp3"
     },
     {
         "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\drawable_round_button.xml.flat",
         "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\drawable\\round_button.xml"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-pngs-24:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_four.wav.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\four.wav"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\drawable_backwithborders.xml.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\drawable\\backwithborders.xml"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_two.mp3.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\two.mp3"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_five.mp3.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\five.mp3"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_five.wav.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\five.wav"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_four.mp3.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\four.mp3"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\drawable_round_button_pressed.xml.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\drawable\\round_button_pressed.xml"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_two.wav.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\two.wav"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_stoptimersound.mp3.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\stoptimersound.mp3"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_one.wav.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\one.wav"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\drawable_selector_tine_pressed.xml.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\drawable\\selector_tine_pressed.xml"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\drawable_kalimbaapp.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\drawable\\kalimbaapp.png"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "com.example.myapplication.app-merged_res-29:/layout_activity_main.xml.flat",
         "source": "com.example.myapplication.app-main-31:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_starttimersound.mp3.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\starttimersound.mp3"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\raw_one.mp3.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\raw\\one.mp3"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\xml_data_extraction_rules.xml.flat",
@@ -94,9 +134,5 @@
     {
         "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-merged_res-29:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\taldu\\.gradle\\daemon\\7.3.3\\com.example.myapplication.app-main-31:\\mipmap-xhdpi\\ic_launcher_round.webp"
     }
 ]

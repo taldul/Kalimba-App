@@ -7,6 +7,8 @@
     <color name="blue_1">#00101f</color>
     <color name="blue_5">#0078ff</color>
     <color name="chocolate">#D2691E</color>
-    <color name="tines_colors">#D1CECE</color>
+    <color name="tines_colors">#949497</color>
+    <color name="tines_pressed">#A9A9A9</color>
+    <color name="timer_red">#B22222</color>
 
 </resources>

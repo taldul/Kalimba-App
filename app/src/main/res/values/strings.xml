@@ -5,5 +5,10 @@
     <string name="_1">1</string>
     <string name="_3">3</string>
     <string name="_5">5</string>
+    <string name="stop">stop</string>
+    <string name="show">show</string>
+    <string name="hide">hide</string>
+    <string name="start">start</string>
+    <string name="testTime">60</string>
 
 </resources>
