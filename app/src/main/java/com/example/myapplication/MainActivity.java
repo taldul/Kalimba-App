@@ -1,7 +1,17 @@
 package com.example.myapplication;
 
 
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.media.AudioAttributes;
+import android.media.AudioPlaybackCaptureConfiguration;
+import android.media.AudioRecord;
 import android.media.SoundPool;
+import android.media.projection.MediaProjection;
+import android.media.projection.MediaProjectionManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -11,7 +21,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,26 +44,35 @@ public class MainActivity extends AppCompatActivity {
     private boolean isTimerButtonClicked = false;
     private boolean isHideTimerButtonClicked = false;
     private CountDownTimer countDownTimer = null;
+    private static final int REQ_PERMISSIONS = 1;
+    private String[] permissions = new String[]{
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+    private MediaProjectionManager mpm;
+    AudioRecord record;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d("DEBUG", "onCreate started");
 
         setContentView(R.layout.activity_main);
-        
+
         //Define app to be from right to left, even if the phone is on LTR language
         getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
 
-        one= findViewById(R.id.one);
-        two= findViewById(R.id.two);
-        three= findViewById(R.id.three);
-        four= findViewById(R.id.four);
-        five= findViewById(R.id.five);
+        one = findViewById(R.id.one);
+        two = findViewById(R.id.two);
+        three = findViewById(R.id.three);
+        four = findViewById(R.id.four);
+        five = findViewById(R.id.five);
         startTimerButton = findViewById(R.id.startTimerBtn);
         timerText = findViewById(R.id.timerText);
         hideTimerButton = findViewById(R.id.hideTimerBtn);
+        reqPermissions();
+        mpm = ((MediaProjectionManager) getSystemService(MEDIA_PROJECTION_SERVICE));
 
 
         soundPool = new SoundPool.Builder().setMaxStreams(5).build();
@@ -80,6 +107,35 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
+                    if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECORD_AUDIO},
+                                1000);
+                    } else {
+                        MediaProjectionManager mediaProjectionManager = (MediaProjectionManager) getSystemService(Context.MEDIA_PROJECTION_SERVICE);
+                        if (mediaProjectionManager != null) {
+                            startActivityForResult(mediaProjectionManager.createScreenCaptureIntent(), 2000);
+                        }
+                    }
+                    ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(
+                            new ActivityResultContracts.StartActivityForResult(),
+                            result -> {
+                                if (result.getResultCode() == AppCompatActivity.RESULT_OK) {
+                                    Intent data = result.getData();
+                                    MediaProjection mp = null;
+                                    if (data != null) {
+                                        mp = mpm.getMediaProjection(result.getResultCode(), data);
+                                    }
+                                    AudioPlaybackCaptureConfiguration config =
+                                            new AudioPlaybackCaptureConfiguration.Builder(mp)
+                                                    .addMatchingUsage(AudioAttributes.USAGE_MEDIA)
+                                                    .build();
+                                    record = new AudioRecord.Builder()
+                                            .setAudioPlaybackCaptureConfig(config)
+                                            .build();
+                                }
+                            }
+                    );
+                    record.startRecording();
                     countDownTimer =   new CountDownTimer(counter* 1000L, 1000){
                         public void onTick(long millisUntilFinished){
                             timerText.setText(String.valueOf(counter));
@@ -91,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                             startTimerButton.setText(R.string.start);
                             isTimerButtonClicked = false;
                             soundPool.play(sound_stopTimer, 1 ,1, 0, 0, 1);
+                            record.stop();
                         }
                     };
                     countDownTimer.start();
@@ -224,5 +281,22 @@ public class MainActivity extends AppCompatActivity {
             }.start();
         }
 
+    }
+
+    private void reqPermissions() {
+        if(ActivityCompat.checkSelfPermission(this, permissions[0]) == PackageManager.PERMISSION_DENIED) {
+            ActivityCompat.requestPermissions(this, permissions, REQ_PERMISSIONS);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQ_PERMISSIONS) {
+            if(grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                finish();
+            }
+        }
     }
 }

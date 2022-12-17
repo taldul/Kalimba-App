@@ -11,20 +11,20 @@
 9-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-11-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:6:5-70
+11-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:6:5-71
 11-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:6:22-68
 12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 12-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:7:5-77
 12-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:7:22-74
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:8:5-80
+13-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:8:5-81
 13-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:8:22-78
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-14-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:9:5-79
+14-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:9:5-80
 14-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:9:22-77
 15
 16    <application
-16-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:11:5-31:19
+16-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:11:5-32:19
 17        android:allowBackup="true"
 17-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:12:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -46,22 +46,22 @@
 27        android:theme="@style/Theme.MyApplication" >
 27-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:19:9-51
 28        <activity
-28-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:21:9-30:20
+28-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:22:9-31:20
 29            android:name="com.example.myapplication.MainActivity"
-29-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:22:13-41
+29-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:23:13-41
 30            android:exported="true"
 30-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:24:13-36
 31            android:screenOrientation="portrait" >
-31-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:23:13-49
+31-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:25:13-49
 32            <intent-filter>
-32-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:25:13-29:29
+32-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:26:13-30:29
 33                <action android:name="android.intent.action.MAIN" />
-33-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:26:17-69
-33-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:26:25-66
+33-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:27:17-69
+33-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:27:25-66
 34
 35                <category android:name="android.intent.category.LAUNCHER" />
-35-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:28:17-77
-35-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:28:27-74
+35-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:29:17-77
+35-->C:\Users\taldu\AndroidStudioProjects\Kalimba-App\app\src\main\AndroidManifest.xml:29:27-74
 36            </intent-filter>
 37        </activity>
 38
